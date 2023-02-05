@@ -4,6 +4,7 @@ import propTypes from "prop-types";
 function CurrencyInput(props) {
   return (
     <div className="group">
+      <h2 className="input-title" value={props.title}>{props.title}</h2>
       <input
         type="text"
         inputMode="numeric"
@@ -23,6 +24,7 @@ function CurrencyInput(props) {
 }
 
 CurrencyInput.propTypes = {
+  title: propTypes.string,
   amount: propTypes.number.isRequired,
   currency: propTypes.string.isRequired,
   currencies: propTypes.array,

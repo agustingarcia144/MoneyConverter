@@ -1,38 +1,93 @@
 body {
     font-family: inter;
-    background: rgb(238,174,202);
-    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(157,191,232,1) 100%);
+    background-color: #f5f5f5;
+    color: #0f0f0f;
+    /* background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(157,191,232,1) 100%); */
     margin: auto;
 }
 
 .App {
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    /* background: #676B6D; */
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 5px );
     -webkit-backdrop-filter: blur( 5px );
-    border-radius: 10px;
+    border-radius: 10px; */
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     margin: auto;
     margin-top: 10%;
-    max-width: 40%;
+    max-width: 400px;
     min-height: 35vh;
 }
 
 .title {
+    background: #36c76d;
+    border-radius: 10px;
     margin: auto;
     padding: 5%;
+    color: #f5f5f5;
+}
+
+.group {
+    background-color: #e0e0e0;
+    margin-top: 15% ;
+    border-radius: 10px;
+}
+
+.input-title{
+    font-weight: 250;
+    padding: 20px;
+    margin-bottom: 0;
 }
 
 input {
     all: unset;
     margin: 10%;
-    border-bottom: 1px solid #0f0f0f;
+    /* border-bottom: 1px solid #0f0f0f; */
 }
 
 select {
     all: unset;
+    background-color: #f5f5f5;
+    padding: 10px;
+    padding-left: 16px;
+    border-radius: 10px;
 }
 
 select:hover {
-    border-bottom: 1px solid
+    color: #676B6D;
+}
+
+@media  (max-width: 400px) {
+    .App{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .group {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .title {
+        margin: 5%;
+        font-size: 20px;
+    }
+
+    input {
+        max-width: min-content;
+        width: 40vw;
+        background-color: #676B6D;
+    }
+
+    select {
+        /* display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end; */
+        padding: 10%;
+    }
 }

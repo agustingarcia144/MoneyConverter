@@ -61,6 +61,7 @@ function App() {
         currencies={Object.keys(rates)}
         amount={amount1}
         currency={currency1}
+        title="From"
       />
       <CurrencyInput
         className="input"
@@ -69,6 +70,7 @@ function App() {
         currencies={Object.keys(rates)}
         amount={amount2}
         currency={currency2}
+        title="To"
       />
     </div>
   );
