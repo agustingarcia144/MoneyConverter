@@ -26,6 +26,9 @@ body {
     margin: auto;
     padding: 5%;
     color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .group {
@@ -66,21 +69,17 @@ select:hover {
         align-items: center;
     }
 
-    .group {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .title {
-        margin: 5%;
-        font-size: 20px;
+    .input-title{
+        grid-area: title;
+        margin-top: 0;
+        margin-right: 10%;
     }
 
     input {
         max-width: min-content;
-        width: 40vw;
-        background-color: #676B6D;
+        width: 30vw;
+        margin-bottom: 10px;
+        grid-area: input;
     }
 
     select {
@@ -88,6 +87,34 @@ select:hover {
         flex-direction: row;
         justify-content: flex-end;
         align-items: flex-end; */
-        padding: 10%;
+        /* padding: 10%; */
+        max-width: fit-content;
+        max-height: 20px;
+        /* margin-right: 30%;
+        margin-top: 15%;
+        margin-bottom: 15px; */
+        margin: auto;
+        grid-area: select;
+        width: 35px;
     }
+
+    .group {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 200px 100px;
+        grid-template-areas: 
+            "title title"
+            "input select";
+        flex-direction: row;
+        justify-content: center;
+        width: 80%;padding-bottom: 5%;
+        
+    }
+
+    .title {
+        margin: 5%;
+        font-size: 20px;
+    }
+
+
 }
